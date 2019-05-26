@@ -42,17 +42,13 @@ public class Grab : MonoBehaviour
 
                     if (linePoints[i].GetComponent<ConfigurableJoint>())
                     {
-                        // Set transform
-                        // linePoints[i].GetComponent<ConfigurableJoint>().connectedAnchor = new Vector3(0f, linePoints[i].transform.position.y - linePoints[i - 1].transform.position.y, 0f);
-                        // linePoints[i].transform.position = Vector3.Lerp(startPosition, hit.point, (1.0f / (linePoints.Length - 1)) * i);
-
                         linePoints[i].transform.eulerAngles = new Vector3(0f, 0f, 0f);
 
                         // Disable locked joint position
                         linePoints[i].GetComponent<ConfigurableJoint>().autoConfigureConnectedAnchor = false;
 
                         // Set locked joint position
-                        linePoints[i].GetComponent<ConfigurableJoint>().connectedAnchor = Vector3.Lerp(linePoints[i].GetComponent<ConfigurableJoint>().connectedAnchor, new Vector3(0f, (hit.point.y - startPosition.y) / (linePoints.Length - 1), linePoints[i].GetComponent<ConfigurableJoint>().connectedAnchor.z), 0.1f);
+                        linePoints[i].GetComponent<ConfigurableJoint>().connectedAnchor = Vector3.Lerp(linePoints[i].GetComponent<ConfigurableJoint>().connectedAnchor, new Vector3(0f, (hit.point.y - startPosition.y) / (linePoints.Length - 1), linePoints[i].GetComponent<ConfigurableJoint>().connectedAnchor.z), 1f * Time.deltaTime);
 
                         // Enable locked joint position
                         linePoints[i].GetComponent<ConfigurableJoint>().autoConfigureConnectedAnchor = false;

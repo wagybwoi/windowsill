@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.37491718, g: 0.3832552, b: 0.36242393, a: 1}
+  m_IndirectSpecularColor: {r: 0.3749172, g: 0.38325512, b: 0.36242387, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1508,7 +1508,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.758e-42, y: 1.05e-43, z: 1e-45, w: 0}
+  m_BoundingSphereOverride: {x: 1.01e-43, y: 1e-45, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2740,6 +2740,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4190843731127821743, guid: 76a5d1a67c8c24929a287a390ae76b27,
+        type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 4190843730894986817, guid: 76a5d1a67c8c24929a287a390ae76b27,
         type: 3}
       propertyPath: m_IsActive
@@ -2800,6 +2805,11 @@ PrefabInstance:
       propertyPath: m_AngularZLimit.limit
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4190843730894986818, guid: 76a5d1a67c8c24929a287a390ae76b27,
+        type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 4190843730738979898, guid: 76a5d1a67c8c24929a287a390ae76b27,
         type: 3}
       propertyPath: m_IsActive
@@ -2819,6 +2829,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AngularZLimit.limit
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190843730738979903, guid: 76a5d1a67c8c24929a287a390ae76b27,
+        type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4190843729756707889, guid: 76a5d1a67c8c24929a287a390ae76b27,
         type: 3}
